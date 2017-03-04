@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="tk.apphouse.prothomalo_banglanewspaper.MainActivity">
+    <item
+        android:id="@+id/action_back"
+        android:icon="@drawable/ic_keyboard_arrow_left_white_24dp"
+        android:orderInCategory="101"
+        android:title="Back"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/action_forward"
+        android:icon="@drawable/ic_keyboard_arrow_right_white_24dp"
+        android:orderInCategory="102"
+        android:title="Forward"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="103"
+        android:title="Reload"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="105"
+        android:title="About Us"
+        app:showAsAction="collapseActionView"/>
+</menu>

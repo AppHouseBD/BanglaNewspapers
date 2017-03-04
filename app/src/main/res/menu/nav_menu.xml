@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="হোম (Home)"/>
+
+    <item
+        android:id="@+id/action_prothom_alo"
+        android:orderInCategory="101"
+        android:title="প্রথম আলো (Prothom Alo)"/>
+
+    <!--<item>ইত্তেফাক (Ittefaq)</item>-->
+    <!--<item>দৈনিক আমাদের সময় (Dainik Amadershomoy)</item>-->
+    <!--<item>দৈনিক নয়া দিগন্ত (Daily Naya Diganta)</item>-->
+    <!--<item>দৈনিক কালের কণ্ঠ (Daily kaler kantho)</item>-->
+    <!--<item>যুগান্তর (Jugantor)</item>-->
+    <!--<item>সমকাল (Samakal)</item>-->
+    <!--<item>আমার দেশ (Amar Desh)</item>-->
+    <!--<item>যায়যায়দিন (Jai Jai Din)</item>-->
+    <!--<item>বাংলাদেশ প্রতিদিন (Bangladesh Pratidin)</item>-->
+    <item
+        android:id="@+id/action_ittefaq"
+        android:orderInCategory="102"
+        android:title="ইত্তেফাক (Ittefaq)"/>
+    <item
+        android:id="@+id/action_amader_somoy"
+        android:orderInCategory="103"
+        android:title="আমাদের সময় (Amadershomoy)"/>
+    <item
+        android:id="@+id/action_noya_digonto"
+        android:orderInCategory="104"
+        android:title="নয়া দিগন্ত (Naya Diganta)"/>
+    <item
+        android:id="@+id/action_kaler_kontho"
+        android:orderInCategory="105"
+        android:title="কালের কণ্ঠ (kaler kantho)"/>
+    <item
+        android:id="@+id/action_jugantor"
+        android:orderInCategory="106"
+        android:title="যুগান্তর (Jugantor)"/>
+
+    <item
+        android:id="@+id/action_somokal"
+        android:orderInCategory="107"
+        android:title="সমকাল (Samakal)"/>
+    <item
+        android:id="@+id/action_amar_desh"
+        android:orderInCategory="108"
+        android:title="মানবজমিন (Manab Zamin)"/>
+    <item
+        android:id="@+id/action_jayjaydin"
+        android:orderInCategory="109"
+        android:title="যায়যায়দিন (Jai Jai Din)"/>
+    <item
+        android:id="@+id/action_bd_protidin"
+        android:orderInCategory="110"
+        android:title="বাংলাদেশ প্রতিদিন(Bangladesh Pratidin)"/>
+
+</menu>

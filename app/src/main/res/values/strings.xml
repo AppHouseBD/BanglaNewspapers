@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bangla Top Newspapers BD</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+
+    <!--newspaper names-->
+    <string-array name="newspaper_names">
+
+        <item>প্রথম আলো (Prothom Alo)</item>
+        <item>ইত্তেফাক (Ittefaq)</item>
+        <item>আমাদের সময় (Dainik Amadershomoy)</item>
+        <item>দৈনিক নয়া দিগন্ত (Daily Naya Diganta)</item>
+        <item>দৈনিক কালের কণ্ঠ (Daily kaler kantho)</item>
+        <item>যুগান্তর (Jugantor)</item>
+        <item>সমকাল (Samakal)</item>
+        <item>মানবজমিন (Daily Manab Zamin)</item>
+        <item>যায়যায়দিন (Jai Jai Din)</item>
+        <item>বাংলাদেশ প্রতিদিন (Bangladesh Pratidin)</item>
+
+    </string-array>
+
+    <!--newspaper link array-->
+    <string-array name="newspaper_links">
+
+        <item>http://www.prothom-alo.com/</item>
+        <item>http://www.ittefaq.com.bd/</item>
+        <item>http://www.dainikamadershomoy.com/</item>
+        <item>http://www.dailynayadiganta.com/</item>
+        <item>http://www.kalerkantho.com/</item>
+        <item>http://www.jugantor.com/</item>
+        <item>http://bangla.samakal.net/</item>
+        <item>http://www.mzamin.com/</item>
+        <item>http://www.jaijaidinbd.com/</item>
+        <item>http://www.bd-pratidin.com/</item>
+
+    </string-array>
+
+    <!--newspaper link array-->
+    <string-array name="newspaper_link_host">
+
+        <item>prothom-alo.com</item>
+        <item>ittefaq.com.bd</item>
+        <item>dainikamadershomoy.com</item>
+        <item>dailynayadiganta.com</item>
+        <item>kalerkantho.com</item>
+        <item>jugantor.com</item>
+        <item>samakal.net</item>
+        <item>mzamin.com</item>
+        <item>jaijaidinbd.com</item>
+        <item>www.bd-pratidin.com</item>
+
+    </string-array>
+
+
+    <!--about us-->
+    <string name="apphouse">©AppHouse</string>
+    <string name="app_house">An AppHouse Product</string>
+    <string name="members">Members:</string>
+    <string name="email">Email:</string>
+    <string name="facebook">FaceBook:</string>
+    <string name="abdullah_kabir_email" translatable="false">Abdullah.kabir12@gmail.com</string>
+    <string name="facebook_com_abdullah_kabir" translatable="false">facebook.com/abdullah.kabir95</string>
+    <string name="facebook_com_mshoikat" translatable="false">facebook.com/mshoikat</string>
+    <string name="shoikot33_gmail_com" translatable="false">Shoikot33@gmail.com</string>
+    <string name="facebook_com_asif_shaafi" translatable="false">facebook.com/asif.shaafi</string>
+    <string name="a15shaafi_209_gmail_com" translatable="false">a15shaafi.209@gmail.com</string>
+    <string name="abdullah_md_humayun_kabir" translatable="false">1.Abdullah MD Humayun Kabir</string>
+    <string name="asif_imtiaz_shaafi" translatable="false">2.Asif Imtiaz Shaafi</string>
+    <string name="mohiuddin_shoikot" translatable="false">3.Mohiuddin Shoikot</string>
+
+    <!--ad ids-->
+    <string name="home_recycler_ad_id" translatable="false">ca-app-pub-5940609524922490/4198761362</string>
+    <string name="home_recycler_ad_id_small" translatable="false">ca-app-pub-5940609524922490/3860684168</string>
+
+</resources>

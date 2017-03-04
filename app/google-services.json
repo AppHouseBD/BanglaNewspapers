@@ -1,0 +1,89 @@
+{
+  "project_info": {
+    "project_number": "233741001860",
+    "firebase_url": "https://banglanewspaper-71988.firebaseio.com",
+    "project_id": "banglanewspaper-71988",
+    "storage_bucket": "banglanewspaper-71988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233741001860:android:51269e0e5c5eba8f",
+        "android_client_info": {
+          "package_name": "tk.apphouse.prothomalo_banglanewspaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233741001860-bbigu8i1493qpmfro78v3g2tmt4loruv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tk.apphouse.prothomalo_banglanewspaper",
+            "certificate_hash": "f83da5d9c0e9d5cd874c72bc8d592368c04636f1"
+          }
+        },
+        {
+          "client_id": "233741001860-i12n8qr74k3sdbh40rjee7kf8tgunodj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkFU4ktjj23iZYDQNKBNy_r7Vb2ZCw9Co"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233741001860:android:aad2e9c25ca59291",
+        "android_client_info": {
+          "package_name": "com.apphousebd.banglanewspapers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233741001860-kfr59q5ju441gfe39rginrc30coj5nr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apphousebd.banglanewspapers",
+            "certificate_hash": "0f0822bb7b91ccb843c79d08be3425605988700d"
+          }
+        },
+        {
+          "client_id": "233741001860-i12n8qr74k3sdbh40rjee7kf8tgunodj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkFU4ktjj23iZYDQNKBNy_r7Vb2ZCw9Co"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
