@@ -30,11 +30,12 @@
     <!-- view for AdMob Banner Ad -->
     <com.google.android.gms.ads.NativeExpressAdView
         android:id="@+id/ad_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#767676"
         ads:adSize="320x80"
-        ads:adUnitId="@string/home_recycler_ad_id_small"
-        android:layout_gravity="bottom"/>
+        ads:adUnitId="@string/home_recycler_ad_id_small"/>
 
 
 </android.support.design.widget.CoordinatorLayout>
