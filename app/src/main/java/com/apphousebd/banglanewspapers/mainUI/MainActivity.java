@@ -13,11 +13,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 
 import com.apphousebd.banglanewspapers.R;
@@ -25,6 +27,7 @@ import com.apphousebd.banglanewspapers.adapter.HomePageAdapter;
 import com.apphousebd.banglanewspapers.fragments.HomeFragment;
 import com.apphousebd.banglanewspapers.fragments.MainActivityFragment;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.NativeExpressAdView;
 
 import java.util.ArrayList;
@@ -36,24 +39,17 @@ public class MainActivity extends AppCompatActivity
         HomePageAdapter.HomeItemListener { ///implementing interface to get the webview reference
 
     public static final String WEB_URL = "web_url";
-
+    public static int titleIndex = 0;
+    Toolbar toolbar;
     private NavigationView mNavigationView;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
-    private NativeExpressAdView adView;
-
+    private CardView ad_container;
     private WebView mWebView;
-
-    Toolbar toolbar;
-
     //    arrays for newspaper names and links
     private List<String> newspaperNames;
     private List<String> newspapersLinkHosts;
     private List<String> newspaperLinks;
-
-
-    public static int titleIndex = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +76,7 @@ public class MainActivity extends AppCompatActivity
 
         setNavigationView();
 
-        adView = (NativeExpressAdView) findViewById(R.id.ad_view);
-        adView.loadAd(new AdRequest.Builder()
-                .build());
+        ad_container = (CardView) findViewById(R.id.native_ad_container);
 
     }
 
@@ -90,7 +84,6 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         loadFragment();
-
     }
 
     private void setNavigationView() {
@@ -156,10 +149,11 @@ public class MainActivity extends AppCompatActivity
         final FragmentManager manager = getSupportFragmentManager();
 
         if (titleIndex != 0) {
-            adView.setVisibility(View.VISIBLE);
+            ad_container.setVisibility(View.VISIBLE);
+            loadAd();
             toolbar.setTitle(newspaperNames.get(titleIndex));
         } else {
-            adView.setVisibility(View.GONE);
+            ad_container.setVisibility(View.GONE);
             toolbar.setTitle(getResources().getString(R.string.app_name));
         }
 
@@ -183,6 +177,37 @@ public class MainActivity extends AppCompatActivity
                 invalidateOptionsMenu();
             }
         });
+    }
+
+    private void loadAd() {
+
+        ad_container.post(new Runnable() {
+            @Override
+            public void run() {
+                float density = getResources().getDisplayMetrics().density;
+                NativeExpressAdView ad =
+                        new NativeExpressAdView(getApplicationContext());
+
+                AdSize size =
+                        new AdSize(((int) (ad_container.getWidth() / density)),
+                                ((ad_container.getHeight())));
+//                Toast.makeText(getApplicationContext(), "width: " + (int) (ad_container.getWidth() / density) +
+//                        " hi: " + ad_container.getHeight(), Toast.LENGTH_SHORT).show();
+                ad.setAdSize(size);
+                ad.setAdUnitId(getString(R.string.home_recycler_ad_id_small));
+                ad.loadAd(new AdRequest.Builder()
+                        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build());
+
+                ad_container.removeAllViews();
+
+                if (ad.getParent() != null) {
+                    ((ViewGroup) ad.getParent()).removeView(ad);
+                }
+
+                ad_container.addView(ad);
+            }
+        });
+        //size
     }
 
     private Fragment getFragment(int id) {

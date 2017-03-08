@@ -26,9 +26,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#bdbdbd"
                 android:fitsSystemWindows="true"
                 android:paddingBottom="64dp"
-                android:background="#bdbdbd"
                 android:paddingTop="4dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/apphouse_logo"/>

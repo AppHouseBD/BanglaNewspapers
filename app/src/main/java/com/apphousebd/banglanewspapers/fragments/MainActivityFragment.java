@@ -151,6 +151,13 @@ public class MainActivityFragment extends Fragment {
     }
 
 
+    ///creating an interface to pass the webview of the current fragment to main activity
+    public interface SetWebViewListener {
+        void setWebView(WebView webView);
+
+        void invalidateMenu();
+    }
+
     private class MyWebChromeClient extends WebChromeClient {
         Context context;
 
@@ -217,14 +224,6 @@ public class MainActivityFragment extends Fragment {
             webView.scrollTo(0, 0);
             mSetWebViewListener.invalidateMenu();
         }
-    }
-
-
-    ///creating an interface to pass the webview of the current fragment to main activity
-    public interface SetWebViewListener {
-        void setWebView(WebView webView);
-
-        void invalidateMenu();
     }
 
 

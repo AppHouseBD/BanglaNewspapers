@@ -1,9 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="#37474f"
+             android:background="@drawable/gradiant"
              tools:context="com.apphousebd.banglanewspapers.fragments.HomeFragment">
 
     <android.support.v7.widget.RecyclerView

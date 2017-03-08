@@ -26,11 +26,10 @@ import java.util.List;
 
 public class HomePageAdapter extends RecyclerView.Adapter {
 
+    public static final int AD_INDEX_DURATION = 5;
     ///ids for checking weather to load ad or title name
     private static final int TITLE_VIEW_TYPE = 1;
     private static final int AD_VIEW_TYPE = 2;
-    public static final int AD_INDEX_DURATION = 5;
-
     private Context mContext;
     private List<Object> mRecyclerViewItems;
     private List<String> mNewspaperNames;
@@ -55,7 +54,7 @@ public class HomePageAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemViewType(int position) {
-        return (position % AD_INDEX_DURATION == 0) ? AD_VIEW_TYPE : TITLE_VIEW_TYPE;
+        return (position % AD_INDEX_DURATION == 0 && position != 0) ? AD_VIEW_TYPE : TITLE_VIEW_TYPE;
     }
 
     @Override
@@ -109,6 +108,11 @@ public class HomePageAdapter extends RecyclerView.Adapter {
 
     }
 
+
+    public interface HomeItemListener {
+
+        void loadPage(String newspaperName);
+    }
 
     private class HomeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -167,7 +171,7 @@ public class HomePageAdapter extends RecyclerView.Adapter {
         public void onClick(View v) {
 
             int index = getAdapterPosition();
-            if (index % AD_INDEX_DURATION != 0) {
+            if (index % AD_INDEX_DURATION != 0 || index == 0) {
                 String name = (String) mRecyclerViewItems.get(index);
                 Log.d("index", "onClick: " + name);
                 mHomeItemListener.loadPage(name);
@@ -182,10 +186,5 @@ public class HomePageAdapter extends RecyclerView.Adapter {
         public NativeAdExpressHolder(View itemView) {
             super(itemView);
         }
-    }
-
-    public interface HomeItemListener {
-
-        void loadPage(String newspaperName);
     }
 }
