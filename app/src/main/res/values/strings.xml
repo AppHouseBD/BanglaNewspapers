@@ -73,6 +73,6 @@
 
     <!--ad ids-->
     <string name="home_recycler_ad_id" translatable="false">ca-app-pub-5940609524922490/4198761362</string>
-    <string name="home_recycler_ad_id_small" translatable="false">ca-app-pub-5940609524922490/3860684168</string>
+    <string name="home_recycler_ad_id_small" translatable="false">ca-app-pub-5940609524922490/3120164164</string>
 
 </resources>

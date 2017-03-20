@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment {
     private void addAds() {
         for (int i = AD_INDEX_DURATION; i < recyclerItemList.size(); i += AD_INDEX_DURATION) {
             NativeExpressAdView adView = new NativeExpressAdView(getContext());
-            adView.setAdUnitId(getString(R.string.home_recycler_ad_id));
+            adView.setAdUnitId(getString(R.string.home_recycler_ad_id_small));
             recyclerItemList.add(i, adView);
         }
 
@@ -75,14 +75,13 @@ public class HomeFragment extends Fragment {
 
                 AdSize size =
                         new AdSize(((int) (recyclerView.getWidth() / density)) - DisplayMatrix.dpToPx(getContext(), 8),
-                                DisplayMatrix.dpToPx(getContext(), 70));
-//                Toast.makeText(getContext(), "width: " + (int) (recyclerView.getWidth() / density), Toast.LENGTH_SHORT).show();
+                                80);
+//                Toast.makeText(getContext(), "width: " + (int) (recyclerView.getWidth() / density) + " height: " + DisplayMatrix.dpToPx(getContext(), 80), Toast.LENGTH_SHORT).show();
 // 5 ,  5 + 5 = 10
                 for (int i = AD_INDEX_DURATION; i < recyclerItemList.size(); i += AD_INDEX_DURATION) {
                     NativeExpressAdView adView = (NativeExpressAdView) recyclerItemList.get(i);
                     adView.setAdSize(size);
                     adView.loadAd(new AdRequest.Builder()
-                            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                             .build());
                 }
             }

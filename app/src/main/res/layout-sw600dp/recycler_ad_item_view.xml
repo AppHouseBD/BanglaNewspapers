@@ -4,7 +4,7 @@
     xmlns:cardView="http://schemas.android.com/apk/res-auto"
     android:id="@+id/recycle_container"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="130dp"
     android:layout_marginTop="4dp"
     android:background="?android:attr/selectableItemBackground"
     cardView:cardBackgroundColor="@android:color/transparent"
